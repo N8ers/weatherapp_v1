@@ -5,6 +5,29 @@ let lat = 39.892692;
 let lng = -86.290568;
 let apiUrl = `https://api.darksky.net/forecast/${sush}/${lat},${lng}`;
 
-request({ url: apiUrl, json: true }, (error, response) => {
-    console.log(response.body.currently)
+const getWeather = (what, callback) => {
+    
+    request({ url: apiUrl, json: true }, (error, response) => {
+        if (error){
+            callback('unable to connect to server')
+        } else {
+            callback(undefined, {
+                currentTemp: response.body.currently.temperature,
+                currentSummary: response.body.currently.summary,
+                currentIcon: response.body.currently.icon,
+                currentFeelLike: response.body.currently.apparentTemperature,
+                currentHumidity: response.body.currently.humidity
+                //feel like & humidity
+            })
+        }
+    })
+}
+
+getWeather('12what', (error, data) => {
+    //console.log(data)
+    console.log(data.currentTemp)
+    console.log(data.currentSummary)
+    console.log(data.currentIcon)
+    console.log(data.currentFeelLike)
+    console.log(data.currentHumidity)
 })
