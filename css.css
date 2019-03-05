@@ -1,0 +1,23 @@
+table, td{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+span {
+    text-align: center;
+}
+
+.hi-lo{
+    text-align: center;
+}
+
+.header, h1 {
+    display: inline-block;
+}
+
+.refresh-btn{
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    margin-left: 20px;
+}
