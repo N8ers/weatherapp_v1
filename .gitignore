@@ -1,0 +1,14 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.ipynb
+*.pyc
+
+.vscode
+__pycache__
