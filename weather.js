@@ -19,6 +19,7 @@ const getWeather = (what, callback) => {
                 currentHumidity: response.body.currently.humidity
                 //feel like & humidity
             })
+            console.log(currentTemp)
         }
     })
 }
