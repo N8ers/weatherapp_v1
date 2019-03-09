@@ -1,49 +1,54 @@
 <!DOCTYPE html>
     <head>
         <title>weatherApp</title>
-        <link rel="stylesheet" href="css.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <div class="header">
-            <h1 id="greeting"></h1><button class="refresh-btn">O</button>
+            <h1 id="greeting"></h1><button class="refresh-btn" onClick="window.location.reload()">O</button>
           </div>
           <h3>In Indianapolis, Indiana... </h3>
           <h3>It's currently <%=weather.currentTemp%>&deg; F and <%=weather.summary%></h3>
           <div>
               <%=weather.currentIcon%>
-            <img id="icon"  alt="weather icon" />
           </div>
             <h4>with a feel like temp of <%=weather.currentFeelLike%>&deg; F & humidity of <%=weather.currentHumidity%>%</h4>
-          <table>
+            <%=weather.dailySummary%>
+            <table>
             <th>today</th>
             <th>tomorrow</th>
-            <th>day 3</th>
-            <th>day 4</th>
-            <th>day 5</th>
+            <th><%=weather.dayThree%></th>
+            <th><%=weather.dayFour%></th>
+            <th><%=weather.dayFive%></th>
             <tr>
               <td>
                   <img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--aSnl_Jw_--/v1515194618/thunder_srzwaa.svg" alt="weather icon" />
-                  <div class="hi-lo" id="today"><div id="today-high"></div>-<div id="today-low"></div></div>
+                  <%=weather.todayIcon%>
+                  <div class="hi-lo"><%=weather.todayHi%>&deg;-<%=weather.todayLo%>&deg;</div>
               </td>
               <!-- var thunder = "https://res.cloudinary.com/raphaeladdile/image/upload/s--aSnl_Jw_--/v1515194618/thunder_srzwaa.svg"; -->
               <td>
                   <img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--yeTLFcMd--/v1515194570/rainy-7_sdbkyl.svg" alt="weather icon" />
-                  <div class="hi-lo" id="day2">69 - 45</div>
+                  <%=weather.dayTwoIcon%>
+                  <div class="hi-lo"><%=weather.dayTwoHi%>&deg;-<%=weather.dayThreeLo%>&deg;</div>
               </td>
               <!-- var rainy = "https://res.cloudinary.com/raphaeladdile/image/upload/s--yeTLFcMd--/v1515194570/rainy-7_sdbkyl.svg" -->
               <td>
                   <img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--lV_oG1pX--/v1515194565/rainy-6_pzlrlc.svg" alt="weather icon" />
-                  <div class="hi-lo" id="day3">69 - 45</div>
+                  <%=weather.dayThreeIcon%>
+                  <div class="hi-lo"><%=weather.dayThreeHi%>&deg;-<%=weather.dayThreeLo%>&deg;</div>
               </td>
               <!-- var rainy2 = "https://res.cloudinary.com/raphaeladdile/image/upload/s--lV_oG1pX--/v1515194565/rainy-6_pzlrlc.svg" -->
               <td>
                   <img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--EsqjgOhi--/v1515194606/snowy-6_zl9kwx.svg" alt="weather icon" />
-                  <div class="hi-lo" id="day4">69 - 45</div>
+                  <%=weather.dayFourIcon%>
+                  <div class="hi-lo"><%=weather.dayFourHi%>&deg;-<%=weather.dayFourLo%>&deg;</div>
               </td>
               <!-- var snowy = "https://res.cloudinary.com/raphaeladdile/image/upload/s--EsqjgOhi--/v1515194606/snowy-6_zl9kwx.svg"; -->
               <td>
                   <img src="https://res.cloudinary.com/raphaeladdile/image/upload/s---6vDoixr--/v1515194528/day_shry4k.svg" alt="weather icon" />
-                  <div class="hi-lo" id="day5">69 - 45</div>
+                  <%=weather.dayFiveIcon%>
+                  <div class="hi-lo"><%=weather.dayFiveHi%>&deg;-<%=weather.dayFiveLo%>&deg;</div>
               </td>
               <!-- var day = "https://res.cloudinary.com/raphaeladdile/image/upload/s---6vDoixr--/v1515194528/day_shry4k.svg"; -->
               <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--CxSp0zXi--/v1515194530/night_quuh8p.svg" alt="weather icon" /></td> -->
