@@ -4,16 +4,16 @@
         <link rel="stylesheet" href="css.css">
     </head>
     <body>
-        
-        <div id="nathanTest"></div>
         <div class="header">
             <h1 id="greeting"></h1><button class="refresh-btn">O</button>
           </div>
           <h3>In Indianapolis, Indiana... </h3>
-          <h3 id="currently">It's currently 
-              <span id="currentTemp">___</span> deg and <span id="type of weather">sunny</span></h3>
-          <img id="icon"  alt="weather icon" />
-          <h4>with a feel like temp of ___ & humidity of __%</h4>
+          <h3>It's currently <%=weather.currentTemp%>&deg; F and <%=weather.summary%></h3>
+          <div>
+              <%=weather.currentIcon%>
+            <img id="icon"  alt="weather icon" />
+          </div>
+            <h4>with a feel like temp of <%=weather.currentFeelLike%>&deg; F & humidity of <%=weather.currentHumidity%>%</h4>
           <table>
             <th>today</th>
             <th>tomorrow</th>

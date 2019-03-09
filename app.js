@@ -1,20 +1,37 @@
 const express = require('express');
-const app = express();
+const request = require('request-promise');
+
+let app = express();
 
 app.set('view engine', 'ejs');
 
-app.get('/', function(req, res){
-    res.render('main.ejs');
-})
+let sush = 'e20fe780791cad1d4d4d7b8484f970a5';
+let lat = 39.892692;
+let lng = -86.290568;
 
-const weather = require('./weather.js');
+let apiUrl = `https://api.darksky.net/forecast/${sush}/${lat},${lng}`;
+console.log(apiUrl)
 
-weather.getWeather('12what', (error, data) => {
-    //console.log(data)
-    console.log(data.currentTemp)
-    console.log(data.currentSummary)
-    console.log(data.currentIcon)
-    console.log(data.currentFeelLike)
-    console.log(data.currentHumidity)
+app.get('/', function(req, res) {
 
-})
+    request(apiUrl, function(error, response, body) {
+        weather_json = JSON.parse(body);
+        // console.log(weather_json.currently.temperature)
+        // console.log(weather_json.currently.summary)
+        
+        let weather = {
+            currentTemp: Math.round(weather_json.currently.temperature),
+            summary: weather_json.currently.summary,
+            currentIcon: weather_json.currently.icon,
+            currentFeelLike: Math.round(weather_json.currently.apparentTemperature),
+            currentHumidity: 100*(weather_json.currently.humidity)
+        }
+
+        let weatherData = {weather: weather}
+
+        res.render('index', weatherData)
+    })
+
+});
+
+app.listen(8000);
