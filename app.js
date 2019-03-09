@@ -28,10 +28,27 @@ app.get('/', function(req, res) {
         let dayfive = moment(weather_json.daily.data[4].time).format("dddd")
 
         console.log(weather_json.currently.icon)
-        
+
+        // let iconSelector = {
+        //     clear-day
+        //     clear-night
+        //     rain
+        //     snow
+        //     sleet
+        //     wind
+        //     fog
+        //     cloudy
+        //     partly-cloudy-day
+        //     partly-cloudy-night
+        // }
+
+        let icons = {
+            rain: "https://res.cloudinary.com/raphaeladdile/image/upload/s--lV_oG1pX--/v1515194565/rainy-6_pzlrlc.svg",
+        }
+
         let weather = {
             // current
-            currentIcon: weather_json.currently.icon,
+            // currentIcon: weather_json.currently.icon,
             // today 
             currentTemp: Math.round(weather_json.currently.temperature),
             summary: weather_json.currently.summary,
@@ -75,10 +92,6 @@ app.get('/', function(req, res) {
         //     // dayFourLo:
         //     // dayFiveHi:
         //     // dayFiveLo: 
-        // }
-
-        // let icons = {
-        //     cloudy: "https://res.cloudinary.com/raphaeladdile/image/upload/s--pkzBuC_i--/v1515194500/cloudy-day-1_n3vykl.svg",
         // }
 
         let weatherData = {weather: weather}
