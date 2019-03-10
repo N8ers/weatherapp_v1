@@ -10,7 +10,7 @@
           <h3>In Indianapolis, Indiana... </h3>
           <h3>It's currently <%=weather.currentTemp%>&deg; F and <%=weather.summary%></h3>
           <div>
-              <%=weather.currentIcon%>
+              <img src='<%=weather.currentIcon%>' />
           </div>
             <h4>with a feel like temp of <%=weather.currentFeelLike%>&deg; F & humidity of <%=weather.currentHumidity%>%</h4>
             <%=weather.dailySummary%>
@@ -22,26 +22,23 @@
             <th><%=weather.dayFive%></th>
             <tr>
               <td>
-                  <%=weather.todayIcon%>
+                <img src='<%=weather.todayIcon%>' />
                   <div class="hi-lo"><%=weather.todayHi%>&deg;-<%=weather.todayLo%>&deg;</div>
               </td>
               <td>
-                  <%=weather.dayTwoIcon%>
+              <img src='<%=weather.dayTwoIcon%>' />
                   <div class="hi-lo"><%=weather.dayTwoHi%>&deg;-<%=weather.dayThreeLo%>&deg;</div>
               </td>
               <td>
-                  <%=weather.dayThreeIcon%>
+              <img src='<%=weather.dayThreeIcon%>' />
                   <div class="hi-lo"><%=weather.dayThreeHi%>&deg;-<%=weather.dayThreeLo%>&deg;</div>
               </td>
               <td>
-                  <img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--EsqjgOhi--/v1515194606/snowy-6_zl9kwx.svg" alt="weather icon" />
-                  <%=weather.dayFourIcon%>
+              <img src='<%=weather.dayFourIcon%>' />
                   <div class="hi-lo"><%=weather.dayFourHi%>&deg;-<%=weather.dayFourLo%>&deg;</div>
               </td>
-              <!-- var snowy = "https://res.cloudinary.com/raphaeladdile/image/upload/s--EsqjgOhi--/v1515194606/snowy-6_zl9kwx.svg"; -->
               <td>
-                  <img src="https://res.cloudinary.com/raphaeladdile/image/upload/s---6vDoixr--/v1515194528/day_shry4k.svg" alt="weather icon" />
-                  <%=weather.dayFiveIcon%>
+              <img src='<%=weather.dayFiveIcon%>' />
                   <div class="hi-lo"><%=weather.dayFiveHi%>&deg;-<%=weather.dayFiveLo%>&deg;</div>
               </td>
               <!-- var day = "https://res.cloudinary.com/raphaeladdile/image/upload/s---6vDoixr--/v1515194528/day_shry4k.svg"; -->
