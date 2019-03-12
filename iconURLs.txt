@@ -1,0 +1,14 @@
+              <!-- var day = "https://res.cloudinary.com/raphaeladdile/image/upload/s---6vDoixr--/v1515194528/day_shry4k.svg"; -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--CxSp0zXi--/v1515194530/night_quuh8p.svg" alt="weather icon" /></td> -->
+              <!-- var night = "https://res.cloudinary.com/raphaeladdile/image/upload/s--CxSp0zXi--/v1515194530/night_quuh8p.svg"; -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--pkzBuC_i--/v1515194500/cloudy-day-1_n3vykl.svg" alt="weather icon" /></td> -->
+              <!-- var cloudyday = "https://res.cloudinary.com/raphaeladdile/image/upload/s--pkzBuC_i--/v1515194500/cloudy-day-1_n3vykl.svg"; -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--DdrT7Iph--/v1515194500/cloudy-night-1_ro8fb5.svg" alt="weather icon" /></td> -->
+              <!-- var cloudynight = "https://res.cloudinary.com/raphaeladdile/image/upload/s--DdrT7Iph--/v1515194500/cloudy-night-1_ro8fb5.svg"; -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--lX8rXjWb--/v1515194500/cloudy-day-2_zqz0m3.svg" alt="weather icon" /></td> -->
+              <!-- var cloudyday2 = "https://res.cloudinary.com/raphaeladdile/image/upload/s--lX8rXjWb--/v1515194500/cloudy-day-2_zqz0m3.svg"; -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--PTiiuxLU--/v1515194500/cloudy-night-2_oeyhlt.svg" alt="weather icon" /></td> -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--UzcYzIJf--/v1515194500/cloudy-day-3_g9ovdi.svg" alt="weather icon" /></td> -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--6Fz0I_JA--/v1515194524/cloudy-night-3_eeeode.svg" alt="weather icon" /></td> -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg" alt="weather icon" /></td> -->
+              <!-- <td><img src="https://res.cloudinary.com/raphaeladdile/image/upload/s--yeTLFcMd--/v1515194570/rainy-7_sdbkyl.svg" alt="weather icon" /></td> -->

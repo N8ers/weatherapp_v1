@@ -32,10 +32,6 @@ app.get('/', function (req, res) {
         let dayfour = moment.unix(dataDayFour).format("dddd")
         let dayfive = moment.unix(dataDayFive).format("dddd")
 
-        console.log(daythree)
-        console.log(dayfour)
-        console.log(dayfive)
-
         // make variables of each 'icon'
         let iconCurrentlyOut = weather_json.currently.icon;
         let iconTodayOut = weather_json.daily.data[0].icon;
@@ -67,13 +63,12 @@ app.get('/', function (req, res) {
                 break;
             case 'wind':
                 console.log('it is wind')
-                console.log('i have no icon')
-                iconCurrently = ""
+                iconCurrently = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'fog':
                 console.log('it is fog')
                 console.log('i have no icon')
-                iconCurrently = ""
+                iconCurrently = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'cloudy':
                 console.log('it is cloudy')
@@ -88,7 +83,9 @@ app.get('/', function (req, res) {
                 iconCurrently = "https://res.cloudinary.com/raphaeladdile/image/upload/s--DdrT7Iph--/v1515194500/cloudy-night-1_ro8fb5.svg";
                 break;
             default:
-                console.log('i dont know whats goin on')
+                console.log('i dont know whats goin on')    
+                iconCurrently = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg";
+                
         }
 
         switch (iconTodayOut) {
@@ -114,13 +111,12 @@ app.get('/', function (req, res) {
                 break;
             case 'wind':
                 console.log('it is wind')
-                console.log('i have no icon')
-                iconToday = ""
+                iconToday = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'fog':
                 console.log('it is fog')
                 console.log('i have no icon')
-                iconToday = ""
+                iconToday = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'cloudy':
                 console.log('it is cloudy')
@@ -136,6 +132,7 @@ app.get('/', function (req, res) {
                 break;
             default:
                 console.log('i dont know whats goin on')
+                iconToday = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg";
         }
 
         switch (iconTomorrowOut) {
@@ -161,13 +158,12 @@ app.get('/', function (req, res) {
                 break;
             case 'wind':
                 console.log('it is wind')
-                console.log('i have no icon')
-                iconTomorrow = ""
+                iconTomorrow = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'fog':
                 console.log('it is fog')
                 console.log('i have no icon')
-                iconTomorrow = ""
+                iconTomorrow = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'cloudy':
                 console.log('it is cloudy')
@@ -183,6 +179,7 @@ app.get('/', function (req, res) {
                 break;
             default:
                 console.log('i dont know whats goin on')
+                iconTomorrow = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg";
         }
 
         switch (iconDay3Out) {
@@ -208,13 +205,12 @@ app.get('/', function (req, res) {
                 break;
             case 'wind':
                 console.log('it is wind')
-                console.log('i have no icon')
-                iconDayThree = ""
+                iconDayThree = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'fog':
                 console.log('it is fog')
                 console.log('i have no icon')
-                iconDayThree = ""
+                iconDayThree = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'cloudy':
                 console.log('it is cloudy')
@@ -230,6 +226,7 @@ app.get('/', function (req, res) {
                 break;
             default:
                 console.log('i dont know whats goin on')
+                iconDayThree = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg";
         }
 
         switch (iconDay4Out) {
@@ -255,13 +252,12 @@ app.get('/', function (req, res) {
                 break;
             case 'wind':
                 console.log('it is wind')
-                console.log('i have no icon')
-                iconDayFour = ""
+                iconDayFour = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'fog':
                 console.log('it is fog')
                 console.log('i have no icon')
-                iconDayFour = ""
+                iconDayFour = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'cloudy':
                 console.log('it is cloudy')
@@ -277,6 +273,7 @@ app.get('/', function (req, res) {
                 break;
             default:
                 console.log('i dont know whats goin on')
+                iconDayFour = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg";
         }
 
         switch (iconDay5Out) {
@@ -302,13 +299,12 @@ app.get('/', function (req, res) {
                 break;
             case 'wind':
                 console.log('it is wind')
-                console.log('i have no icon')
-                iconDayFive = ""
+                iconDayFive = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'fog':
                 console.log('it is fog')
                 console.log('i have no icon')
-                iconDayFive = ""
+                iconDayFive = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg"
                 break;
             case 'cloudy':
                 console.log('it is cloudy')
@@ -324,17 +320,16 @@ app.get('/', function (req, res) {
                 break;
             default:
                 console.log('i dont know whats goin on')
+                iconDayFive = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg";
         }
 
         let weather = {
             // current
-            // currentIcon: weather_json.currently.icon,
-            // today 
             currentTemp: Math.round(weather_json.currently.temperature),
             summary: weather_json.currently.summary,
             currentIcon: iconCurrently,
             currentFeelLike: Math.round(weather_json.currently.apparentTemperature),
-            currentHumidity: 100 * (weather_json.currently.humidity),
+            currentHumidity: Math.round(100 * (weather_json.currently.humidity)),
             dailySummary: weather_json.daily.summary,
             todayHi: Math.round(weather_json.daily.data[0].temperatureMax),
             todayLo: Math.round(weather_json.daily.data[0].temperatureMin),
@@ -360,22 +355,6 @@ app.get('/', function (req, res) {
             dayFiveLo: Math.round(weather_json.daily.data[4].temperatureMin),
             dayFiveIcon: iconDayFive
         }
-        console.log(weather.dayThree)
-        console.log(weather.dayFour)
-        console.log(weather.dayFive)
-
-        // let forecast = {
-        //     todayHi: Math.round(weather_json.daily.data.temperature),
-        //     todayLo: Math.round(weather_json.daily.temperature)
-        //     // dayTwoHi:
-        //     // dayTwoLo:
-        //     // dayThreeHi:
-        //     // dayThreeLo:
-        //     // dayFourHi:
-        //     // dayFourLo:
-        //     // dayFiveHi:
-        //     // dayFiveLo: 
-        // }
 
         let weatherData = {
             weather: weather
