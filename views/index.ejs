@@ -2,7 +2,6 @@
     <head>
         <title>weatherApp</title>
         <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/moment.min.js"></script>
         <script src="/js/clock.js"></script>
     </head>
     <body onload="startTime()">
@@ -15,9 +14,16 @@
 
         <!-- descriptions -->
             <div class="column description">
-                <div id="clock">0:00 am</div>
-                <button class="refresh-btn" onClick="window.location.reload()">Update</button>
-                <h5 class="mainSummary"> <%=weather.date%> </h5>
+                <div>
+                <div class="timeDateUpdate">
+                    <span id="clock">0:00 am </span>
+                    <span>
+                        <button class="refresh-btn" onClick="window.location.reload()">Update</button>
+                    </span>
+                </div>
+                
+                <span class="mainSummary"> <%=weather.date%> </span>
+                </div>
                 <h5 class="mainSummary"><%=weather.currentTemp%>&deg;F  |  <%=weather.summary%></h5> 
                 <h5 class="mainSummary">Feels like <%=weather.currentFeelLike%>&deg; F | humidity <%=weather.currentHumidity%>%</h5>
             </div>
@@ -26,7 +32,7 @@
         <h5 class="daySummary"><%=weather.dailySummary%></h5>
     <!-- table -->
             <table>
-            <th>Today</th>
+            <th>TODAY</th>
             <th><%=weather.dayTwo%></th>
             <th><%=weather.dayThree%></th>
             <th><%=weather.dayFour%></th>

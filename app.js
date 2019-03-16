@@ -108,22 +108,22 @@ app.get('/', function (req, res) {
             todayLo: Math.round(weather_json.daily.data[0].temperatureMin),
             todayIcon: iconLooper(iconTodayOut),
             // tomorrow
-            dayTwo: daytwo,
+            dayTwo: daytwo.toUpperCase(),
             dayTwoHi: Math.round(weather_json.daily.data[1].temperatureMax),
             dayTwoLo: Math.round(weather_json.daily.data[1].temperatureMin),
             dayTwoIcon: iconLooper(iconTomorrowOut),
             // day three
-            dayThree: daythree,
+            dayThree: daythree.toUpperCase(),
             dayThreeHi: Math.round(weather_json.daily.data[2].temperatureMax),
             dayThreeLo: Math.round(weather_json.daily.data[2].temperatureMin),
             dayThreeIcon: iconLooper(iconDay3Out),
             // day four
-            dayFour: dayfour,
+            dayFour: dayfour.toUpperCase(),
             dayFourHi: Math.round(weather_json.daily.data[3].temperatureMax),
             dayFourLo: Math.round(weather_json.daily.data[3].temperatureMin),
             dayFourIcon: iconLooper(iconDay4Out),
             // day five
-            dayFive: dayfive,
+            dayFive: dayfive.toUpperCase(),
             dayFiveHi: Math.round(weather_json.daily.data[4].temperatureMax),
             dayFiveLo: Math.round(weather_json.daily.data[4].temperatureMin),
             dayFiveIcon: iconLooper(iconDay5Out)
