@@ -32,6 +32,10 @@ body {
     margin-top: 12px;
 }
 
+.btnWraper {
+    margin: 0px 0px;
+}
+
 .refresh-btn{  
     background-color: lightblue;
     color: white;
@@ -76,6 +80,7 @@ body {
 }
 
 .mainSummary {
+    padding-top: 5px;
     margin: 0px 0px;
 }
 

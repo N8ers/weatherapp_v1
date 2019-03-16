@@ -15,15 +15,14 @@
         <!-- descriptions -->
             <div class="column description">
                 <div>
-                <div class="timeDateUpdate">
-                    <span id="clock">0:00 am </span>
-                    <span>
+                    <div class="timeDateUpdate">
+                        <span id="clock">0:00 am </span>
+                        &nbsp; &nbsp; &nbsp;
                         <button class="refresh-btn" onClick="window.location.reload()">Update</button>
-                    </span>
-                </div>
-                
-                <span class="mainSummary"> <%=weather.date%> </span>
-                </div>
+                    </div>
+                        <span class="date"> <%=weather.date%> </span>
+                    </div>
+                    <hr>
                 <h5 class="mainSummary"><%=weather.currentTemp%>&deg;F  |  <%=weather.summary%></h5> 
                 <h5 class="mainSummary">Feels like <%=weather.currentFeelLike%>&deg; F | humidity <%=weather.currentHumidity%>%</h5>
             </div>
