@@ -5,32 +5,46 @@
         <script src="/js/clock.js"></script>
     </head>
     <body onload="startTime()">
-    <div id="container">        
-        <div class="row">
-        <!-- icon -->
-            <div class="column iconColumn">        
-                <img class="currentWeatherIcon" src='<%=weather.currentIcon%>' />
+        <div id="container">        
+            <div class="row">
+            <!-- icon -->
+                <div class="column iconColumn">
+                    <div class="currentWeatherIcon">
+                        <div class="currentWeatherTitle">CURRENT WEATHER</div>
+                        <div class="currentImg">    
+                            <img src='<%=weather.currentIcon%>' />
+                        </div>
+
+                    <div class="row">
+
+                        <div class="column">
+                            <div class="currentTemp"><%=weather.currentTemp%>&deg;F</div>
+                            <div class="currentSummary"><%=weather.summary%></div>
+                        </div>
+                        <div class="column">
+                            <div class="feelsLike">Feels like <%=weather.currentFeelLike%>&deg; F</div>
+                            <div class="humidity">humidity <%=weather.currentHumidity%>%</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         <!-- descriptions -->
             <div class="column description">
-                <div>
-                    <div class="timeDateUpdate">
-                        <span id="clock">0:00 am </span>
-                        &nbsp; &nbsp; &nbsp;
-                        <button class="refresh-btn" onClick="window.location.reload()">Update</button>
+                
+                <div class="timeDateUpdate">
+                    <button class="refresh-btn" onClick="window.location.reload()">Update</button>
+                    <div class="clockContainer">
+                        <div id="clock">0:00 am </div>
                     </div>
-                        <span class="date"> <%=weather.date%> </span>
-                    </div>
-                    <hr>
-                <h5 class="mainSummary"><%=weather.currentTemp%>&deg;F  |  <%=weather.summary%></h5> 
-                <h5 class="mainSummary">Feels like <%=weather.currentFeelLike%>&deg; F | humidity <%=weather.currentHumidity%>%</h5>
+                    <div class="date"> <%=weather.date%> </div>
+                    <p class="daySummary"><%=weather.dailySummary%></p>
+                </div>
             </div>
         </div>
 
-        <h5 class="daySummary"><%=weather.dailySummary%></h5>
     <!-- table -->
-            <table>
+        <table>
             <th>TODAY</th>
             <th><%=weather.dayTwo%></th>
             <th><%=weather.dayThree%></th>
@@ -59,7 +73,7 @@
               </td>
         
             </tr>
-          </table>
-</div>
+        </table>
+        </div>
     </body>
 </html>
