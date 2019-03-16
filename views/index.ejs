@@ -2,19 +2,29 @@
     <head>
         <title>weatherApp</title>
         <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/moment.min.js"></script>
+        <script src="/js/clock.js"></script>
     </head>
-    <body>
-    <div id="container">
-        <div class="header">
-            <h1 id="greeting"></h1><button class="refresh-btn" onClick="window.location.reload()">Refresh</button>
-          </div>
-          <h3>In Indianapolis, Indiana... </h3>
-          <h3>It's currently <%=weather.currentTemp%>&deg; F and <%=weather.summary%></h3>
-          <div>
-              <img class="currentWeatherIcon" src='<%=weather.currentIcon%>' />
-          </div>
-            <h4>with a feel like temp of <%=weather.currentFeelLike%>&deg; F & humidity of <%=weather.currentHumidity%>%</h4>
-            <%=weather.dailySummary%>
+    <body onload="startTime()">
+    <div id="container">        
+        <div class="row">
+        <!-- icon -->
+            <div class="column iconColumn">        
+                <img class="currentWeatherIcon" src='<%=weather.currentIcon%>' />
+            </div>
+
+        <!-- descriptions -->
+            <div class="column description">
+                <div id="clock">0:00 am</div>
+                <button class="refresh-btn" onClick="window.location.reload()">Update</button>
+                <h5 class="mainSummary"> <%=weather.date%> </h5>
+                <h5 class="mainSummary"><%=weather.currentTemp%>&deg;F  |  <%=weather.summary%></h5> 
+                <h5 class="mainSummary">Feels like <%=weather.currentFeelLike%>&deg; F | humidity <%=weather.currentHumidity%>%</h5>
+            </div>
+        </div>
+
+        <h5 class="daySummary"><%=weather.dailySummary%></h5>
+    <!-- table -->
             <table>
             <th>Today</th>
             <th><%=weather.dayTwo%></th>
@@ -24,28 +34,27 @@
             <tr>
               <td>
                 <img src='<%=weather.todayIcon%>' />
-                  <div class="hi-lo"><%=weather.todayHi%>&deg;-<%=weather.todayLo%>&deg;</div>
+                  <div class="hi-lo"><%=weather.todayHi%>&deg;&nbsp;|&nbsp;<%=weather.todayLo%>&deg;</div>
               </td>
               <td>
               <img src='<%=weather.dayTwoIcon%>' />
-                  <div class="hi-lo"><%=weather.dayTwoHi%>&deg;-<%=weather.dayThreeLo%>&deg;</div>
+                  <div class="hi-lo"><%=weather.dayTwoHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
               </td>
               <td>
               <img src='<%=weather.dayThreeIcon%>' />
-                  <div class="hi-lo"><%=weather.dayThreeHi%>&deg;-<%=weather.dayThreeLo%>&deg;</div>
+                  <div class="hi-lo"><%=weather.dayThreeHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
               </td>
               <td>
               <img src='<%=weather.dayFourIcon%>' />
-                  <div class="hi-lo"><%=weather.dayFourHi%>&deg;-<%=weather.dayFourLo%>&deg;</div>
+                  <div class="hi-lo"><%=weather.dayFourHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFourLo%>&deg;</div>
               </td>
               <td>
               <img src='<%=weather.dayFiveIcon%>' />
-                  <div class="hi-lo"><%=weather.dayFiveHi%>&deg;-<%=weather.dayFiveLo%>&deg;</div>
+                  <div class="hi-lo"><%=weather.dayFiveHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFiveLo%>&deg;</div>
               </td>
         
             </tr>
           </table>
 </div>
-        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>

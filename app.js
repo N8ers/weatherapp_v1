@@ -18,16 +18,21 @@ let apiUrl = `https://api.darksky.net/forecast/${sush}/${lat},${lng}`;
 app.get('/', function (req, res) {
 
     request(apiUrl, function (error, response, body) {
+
+        if (response.statusCode === 404) {
+            console.log('hey, hi, i didnt work - am i internet?')
+        }
+
         weather_json = JSON.parse(body);
 
         let dataDayThree = weather_json.daily.data[2].time;
         let dataDayFour = weather_json.daily.data[3].time;
         let dataDayFive = weather_json.daily.data[4].time
 
-        let daytwo = moment.unix(weather_json.daily.data[1].time).format("dddd")
-        let daythree = moment.unix(dataDayThree).format("dddd")
-        let dayfour = moment.unix(dataDayFour).format("dddd")
-        let dayfive = moment.unix(dataDayFive).format("dddd")
+        let daytwo = moment.unix(weather_json.daily.data[1].time).format("ddd")
+        let daythree = moment.unix(dataDayThree).format("ddd")
+        let dayfour = moment.unix(dataDayFour).format("ddd")
+        let dayfive = moment.unix(dataDayFive).format("ddd")
 
         let iconCurrentlyOut = weather_json.currently.icon;
         let iconTodayOut = weather_json.daily.data[0].icon;
@@ -36,7 +41,7 @@ app.get('/', function (req, res) {
         let iconDay4Out = weather_json.daily.data[3].icon;
         let iconDay5Out = weather_json.daily.data[4].icon;
 
-        function iconLooper(x){
+        function iconLooper(x) {
 
             switch (x) {
                 case 'rain':
@@ -70,13 +75,28 @@ app.get('/', function (req, res) {
                     iconCurrently = "https://res.cloudinary.com/raphaeladdile/image/upload/s--DdrT7Iph--/v1515194500/cloudy-night-1_ro8fb5.svg";
                     break;
                 default:
-                    console.log('i dont know whats goin on')    
+                    console.log('i dont know whats goin on')
                     iconCurrently = "https://res.cloudinary.com/raphaeladdile/image/upload/s--ivgWegRI--/v1515194500/cloudy_vqbnvk.svg";
+                    defaultTest = "i am an unkno"
             }
             return iconCurrently
         }
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        // if default in switch is activated add in what the actual weather is, like 'thunderstorms' //
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
+        // function updateTime() {
+        //     dayTime = moment().format("dddd h:mma")
+        //     console.log(dayTime)
+        //     return dayTime
+        //  }
+        //  setInterval(updateTime, 5000)
+
         let weather = {
+            // date & time
+            //dayTime: updateTime(),
+            date: moment().format("MMM Do, YYYY"),
             // current
             currentTemp: Math.round(weather_json.currently.temperature),
             summary: weather_json.currently.summary,
@@ -112,8 +132,6 @@ app.get('/', function (req, res) {
         let weatherData = {
             weather: weather
         }
-        // let forecastData = {forecast: forecast}
-        // let iconSelector = {icons: icons}
 
         res.render('index', weatherData)
     })
