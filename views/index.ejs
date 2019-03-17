@@ -2,6 +2,7 @@
     <head>
         <title>weatherApp</title>
         <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
         <script src="/js/clock.js"></script>
     </head>
     <body onload="startTime()">
@@ -23,7 +24,7 @@
                         </div>
                         <div class="column feelAndHumidity">
                             <div class="feelsLike">Feels like <%=weather.currentFeelLike%>&deg; F</div>
-                            <div class="humidity">humidity <%=weather.currentHumidity%>%</div>
+                            <div class="humidity">Humidity <%=weather.currentHumidity%>%</div>
                         </div>
                     </div>
                 </div>
@@ -52,27 +53,27 @@
             <th><%=weather.dayFive%></th>
             <tr>
                 <td>
-                    <img src='<%=weather.todayIcon%>' />
+                    <img class="forcastedIcon" src='<%=weather.todayIcon%>' />
                     <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
                     <div class="hi-lo"><%=weather.todayHi%>&deg;&nbsp;|&nbsp;<%=weather.todayLo%>&deg;</div>
                 </td>
                 <td>
-                    <img src='<%=weather.dayTwoIcon%>' />
+                    <img class="forcastedIcon" src='<%=weather.dayTwoIcon%>' />
                     <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
                     <div class="hi-lo"><%=weather.dayTwoHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
                 </td>
                 <td>
-                    <img src='<%=weather.dayThreeIcon%>' />
+                    <img class="forcastedIcon" src='<%=weather.dayThreeIcon%>' />
                     <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
                     <div class="hi-lo"><%=weather.dayThreeHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
                 </td>
                 <td>
-                    <img src='<%=weather.dayFourIcon%>' />
+                    <img class="forcastedIcon" src='<%=weather.dayFourIcon%>' />
                     <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
                     <div class="hi-lo"><%=weather.dayFourHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFourLo%>&deg;</div>
                 </td>
                 <td>
-                    <img src='<%=weather.dayFiveIcon%>' />
+                    <img class="forcastedIcon" src='<%=weather.dayFiveIcon%>' />
                     <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
                     <div class="hi-lo"><%=weather.dayFiveHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFiveLo%>&deg;</div>
                 </td>

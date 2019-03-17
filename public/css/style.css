@@ -8,7 +8,7 @@
     border-radius: 10px;
     background: linear-gradient(white, rgb(41,171,226), rgb(74,139,209));
     color:white;
-    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .row {
@@ -30,19 +30,20 @@
 .currentWeatherIcon {
     margin: 0 auto;
     align-content: center;
+    margin-bottom: 5px;
 }
 
 .currentWeatherTitle {
     color: white;
     background: rgb(74,139,209);
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
     font-size: 14px;
     width: 89%;
     height: 19px;
     margin-top: -9px;
-    margin-left: -16px;
+    margin-left: -10px;
     padding-top:  3px;
-    padding-left: 15px;
+    padding-left: 4px;
 }
 
 .currentImg{
@@ -51,13 +52,14 @@
 }
 
 .img{
-    width: 150px;
+    width: 137px;
     margin-top: -25px;
-    margin-bottom: -45px;
+    margin-bottom: -23px;
 }
 
 .currentTemp{
-    font-size: 20px;
+    font-size: 30px;
+    margin: -9px;
 }
 
 .currentSummary{
@@ -66,14 +68,17 @@
 
 .feelAndHumidity{
     margin-top: 2px;
+    text-align: left;
 }
 
 .feelsLike {
-    font-size: 12px;
+    font-size: 10px;
+    padding-left: 10px;
 }
 
 .humidity {
-    font-size: 12px;
+    font-size: 10px;
+    padding-left: 10px;
 }
 
 .description {
@@ -132,7 +137,11 @@ table{
     color: white;
     margin: 0 auto;
     border-spacing: 10px 0px;
-    margin-top: 12px;
+    margin-top: 5px;
+}
+
+th {
+    font-weight: 400;
 }
 
 td{
@@ -140,6 +149,10 @@ td{
     background-color: white;
     border-radius: 10px;
     margin: 0 auto;
+}
+
+.forcastedIcon {
+    margin-top: -8px;
 }
 
 .hi-lo-text {
