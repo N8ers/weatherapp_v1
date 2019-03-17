@@ -96,7 +96,7 @@ app.get('/', function (req, res) {
         let weather = {
             // date & time
             //dayTime: updateTime(),
-            date: moment().format("MMM Do, YYYY"),
+            date: moment().format("MMMM Do, YYYY"),
             // current
             currentTemp: Math.round(weather_json.currently.temperature),
             summary: weather_json.currently.summary,

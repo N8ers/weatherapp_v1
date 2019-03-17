@@ -12,7 +12,7 @@
                     <div class="currentWeatherIcon">
                         <div class="currentWeatherTitle">CURRENT WEATHER</div>
                         <div class="currentImg">    
-                            <img src='<%=weather.currentIcon%>' />
+                            <img class="img" src='<%=weather.currentIcon%>' />
                         </div>
 
                     <div class="row">
@@ -21,7 +21,7 @@
                             <div class="currentTemp"><%=weather.currentTemp%>&deg;F</div>
                             <div class="currentSummary"><%=weather.summary%></div>
                         </div>
-                        <div class="column">
+                        <div class="column feelAndHumidity">
                             <div class="feelsLike">Feels like <%=weather.currentFeelLike%>&deg; F</div>
                             <div class="humidity">humidity <%=weather.currentHumidity%>%</div>
                         </div>
@@ -51,26 +51,31 @@
             <th><%=weather.dayFour%></th>
             <th><%=weather.dayFive%></th>
             <tr>
-              <td>
-                <img src='<%=weather.todayIcon%>' />
-                  <div class="hi-lo"><%=weather.todayHi%>&deg;&nbsp;|&nbsp;<%=weather.todayLo%>&deg;</div>
-              </td>
-              <td>
-              <img src='<%=weather.dayTwoIcon%>' />
-                  <div class="hi-lo"><%=weather.dayTwoHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
-              </td>
-              <td>
-              <img src='<%=weather.dayThreeIcon%>' />
-                  <div class="hi-lo"><%=weather.dayThreeHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
-              </td>
-              <td>
-              <img src='<%=weather.dayFourIcon%>' />
-                  <div class="hi-lo"><%=weather.dayFourHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFourLo%>&deg;</div>
-              </td>
-              <td>
-              <img src='<%=weather.dayFiveIcon%>' />
-                  <div class="hi-lo"><%=weather.dayFiveHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFiveLo%>&deg;</div>
-              </td>
+                <td>
+                    <img src='<%=weather.todayIcon%>' />
+                    <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
+                    <div class="hi-lo"><%=weather.todayHi%>&deg;&nbsp;|&nbsp;<%=weather.todayLo%>&deg;</div>
+                </td>
+                <td>
+                    <img src='<%=weather.dayTwoIcon%>' />
+                    <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
+                    <div class="hi-lo"><%=weather.dayTwoHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
+                </td>
+                <td>
+                    <img src='<%=weather.dayThreeIcon%>' />
+                    <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
+                    <div class="hi-lo"><%=weather.dayThreeHi%>&deg;&nbsp;|&nbsp;<%=weather.dayThreeLo%>&deg;</div>
+                </td>
+                <td>
+                    <img src='<%=weather.dayFourIcon%>' />
+                    <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
+                    <div class="hi-lo"><%=weather.dayFourHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFourLo%>&deg;</div>
+                </td>
+                <td>
+                    <img src='<%=weather.dayFiveIcon%>' />
+                    <p class="hi-lo-text">high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low</p>
+                    <div class="hi-lo"><%=weather.dayFiveHi%>&deg;&nbsp;|&nbsp;<%=weather.dayFiveLo%>&deg;</div>
+                </td>
         
             </tr>
         </table>
